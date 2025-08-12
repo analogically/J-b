@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>J*B</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main id="app" class="card">
+      <header class="header">
+        <img id="logo" src="../icon.png" alt="J*b" />
+        <div>
+          <h1>J*b</h1>
+          <div class="sub">Censor j*b-connected words automatically</div>
+        </div>
+        <div class="header-actions">
+          <button id="theme-btn" class="icon-ghost" title="Toggle theme" aria-label="Toggle theme"><img src="../theme.png" alt="theme" width="28" height="28" /></button>
+          <button id="settings-btn" class="icon-ghost" title="Settings" aria-label="Settings"><img src="../settings.png" alt="settings" width="28" height="28" /></button>
+        </div>
+      </header>
+      <section id="settings-panel" class="collapsible collapsed">
+      <div class="section-title">Settings</div>
+      <section class="row">
+        <label class="toggle switch">
+          <input type="checkbox" id="enabled-toggle" />
+          <span class="slider" aria-hidden="true"></span>
+          <span class="label">Enable censoring</span>
+        </label>
+      </section>
+      </section>
+
+      <div class="divider"></div>
+
+      <div class="section-title">Site</div>
+      <section class="row">
+        <div class="site-control">
+          <div class="site-line">
+            <span id="site-host">current site</span>
+            <span id="site-status" class="badge">Enabled</span>
+          </div>
+          <button id="site-toggle" class="secondary">Disable on this site</button>
+        </div>
+      </section>
+
+      <div class="section-title">Links</div>
+      <section class="row icons">
+        <button class="icon-btn" id="x-link" title="X.com">
+          <img src="../X.png" alt="X" />
+        </button>
+        <button class="icon-btn" id="github-link" title="GitHub">
+          <img src="../github.png" alt="GitHub" />
+        </button>
+      </section>
+
+      <div class="section-title">Donate</div>
+      <section class="donate">
+        <div class="donate-title">Please donate as I don't have a j*b.</div>
+        <button class="donate-row" data-copy="#btc-addr" title="Copy BTC address">
+          <img src="../bitcoin.png" alt="BTC" />
+          <div><strong>btc</strong>: <span class="mono" id="btc-addr">bc1qs40flp8knz5ztnw7tugax8rjyg2lxw8e22dfwj</span></div>
+        </button>
+        <button class="donate-row" data-copy="#eth-addr" title="Copy ETH address">
+          <img src="../ethereum.png" alt="ETH" />
+          <div><strong>ETH</strong>: <span class="mono" id="eth-addr">0x99A9D6e9BCA8f12023b60C0Ea3d91D5fEBA776Cc</span></div>
+        </button>
+        <button class="donate-row" data-copy="#sol-addr" title="Copy SOL address">
+          <img src="../solana.png" alt="SOL" />
+          <div><strong>SOL</strong>: <span class="mono" id="sol-addr">8Z3wUJqYfpKSnsa8QXcyAfmWDSXZThcpgvmokCSjYEHu</span></div>
+        </button>
+      </section>
+
+      <div id="toast" class="toast" hidden></div>
+    </main>
+    <script src="popup.js" defer></script>
+  </body>
+</html>
+

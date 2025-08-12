@@ -1,0 +1,70 @@
+{
+  "manifest_version": 3,
+  "name": "J*B",
+  "description": "J*b – censors bad words",
+  "version": "0.1.0",
+  "action": {
+    "default_title": "J*b",
+    "default_popup": "src/popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "src/replacer.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "storage",
+    "contextMenus",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/contentScript.js",
+        "src/wordmap.json",
+        "src/wordmapPL.json",
+        "src/links.json",
+        "X.png",
+        "github.png",
+        "bitcoin.png",
+        "ethereum.png",
+        "solana.png",
+        "icon.png",
+        "settings.png",
+        "theme.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+  ,
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
+
