@@ -1,6 +1,6 @@
-# Job Extension
+# J*b Extension
 
-A browser extension for job search automation and management.
+An extension to censor bad words. Works in both English and Polish.
 
 ## Installation
 
