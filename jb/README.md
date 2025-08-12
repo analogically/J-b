@@ -1,3 +1,4 @@
 # j*b
 Censors bad words automatically.
-Works in bothb English and Polish, ore languages to come!
+Works in both English and Polish, more languages to come!
+
